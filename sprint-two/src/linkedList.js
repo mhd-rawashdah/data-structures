@@ -26,19 +26,15 @@ var LinkedList = function() {
 
   // TO DO:
   list.contains = function(target) {
-    var pointer = this.head;
-    function search(){
-
-      if(pointer.next === null) {
-        return false;
-      }
-      if(pointer.value === target) {
+    var head = this.head
+    while(head){
+      if (head.value === target) {
         return true;
       }
-      pointer = pointer.next;
-      return false || search();
+      head= head.next;
     }
-  return search();
+    return false;
+
   }
   return list;
 };
