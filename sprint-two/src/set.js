@@ -7,7 +7,6 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
-	debugger
 	if (!this._storage.hasOwnProperty(item)) {
 		this._storage[item] = true;
 	}
